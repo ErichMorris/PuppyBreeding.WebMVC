@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace PuppyBreeding.Data
 {
-    class Puppy
+    public class Puppy
     {
         [Key]
         public int PuppyId { get; set; }

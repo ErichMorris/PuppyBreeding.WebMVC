@@ -55,10 +55,21 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PuppyService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PuppyBreeding.Data\PuppyBreeding.Data.csproj">
+      <Project>{2b4f56ac-55ec-468a-aaab-161850823c92}</Project>
+      <Name>PuppyBreeding.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PuppyBreeding.Models\PuppyBreeding.Models.csproj">
+      <Project>{ddf5965b-7fda-4b93-a468-8edf9ba4733e}</Project>
+      <Name>PuppyBreeding.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

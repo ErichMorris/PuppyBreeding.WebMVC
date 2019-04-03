@@ -1,4 +1,6 @@
-﻿using PuppyBreeding.Models;
+﻿using Microsoft.AspNet.Identity;
+using PuppyBreeding.Models;
+using PuppyBreeding.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,13 +15,39 @@ namespace PuppyBreeding.WebMVC.Controllers
         // GET: Puppy
         public ActionResult Index()
         {
-            var model = new PuppyListItem[0];
+            var userId = Guid.Parse(User.Identity.GetUserId());
+            var service = new PuppyService(userId);
+            var model = service.GetPuppies();
             return View(model);
         }
         // GET
         public ActionResult Create()
         {
             return View();
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Create(PuppyCreate model)
+        {
+            if (!ModelState.IsValid) return View(model);
+
+            var service = CreatePuppyService();
+
+            if (service.CreatePuppy(model))
+            {
+                TempData["SaveResult"] = "Your puppy was added";
+                return RedirectToAction("Index");
+            };
+            ModelState.AddModelError("", "Puppy could not be added.");
+            return View(model);
+        }
+
+
+        private PuppyService CreatePuppyService()
+        {
+            var userId = Guid.Parse(User.Identity.GetUserId());
+            var service = new PuppyService(userId);
+            return service;
         }
     }
 }
