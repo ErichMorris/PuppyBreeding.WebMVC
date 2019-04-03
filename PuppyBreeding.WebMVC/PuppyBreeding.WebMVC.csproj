@@ -176,11 +176,11 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\PuppyController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -241,6 +241,8 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Puppy\Index.cshtml" />
+    <Content Include="Views\Puppy\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -257,6 +259,20 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PuppyBreeding.Data\PuppyBreeding.Data.csproj">
+      <Project>{2b4f56ac-55ec-468a-aaab-161850823c92}</Project>
+      <Name>PuppyBreeding.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PuppyBreeding.Models\PuppyBreeding.Models.csproj">
+      <Project>{ddf5965b-7fda-4b93-a468-8edf9ba4733e}</Project>
+      <Name>PuppyBreeding.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PuppyBreeding.Services\PuppyBreeding.Services.csproj">
+      <Project>{16fd8cb4-80dc-4494-b509-2f6f170befb3}</Project>
+      <Name>PuppyBreeding.Services</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

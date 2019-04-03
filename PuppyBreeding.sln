@@ -5,6 +5,14 @@ VisualStudioVersion = 15.0.28307.421
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PuppyBreeding.WebMVC", "PuppyBreeding.WebMVC\PuppyBreeding.WebMVC.csproj", "{12D4618D-A308-4799-879A-415ABC7F143D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PuppyBreeding.Data", "PuppyBreeding.Data\PuppyBreeding.Data.csproj", "{2B4F56AC-55EC-468A-AAAB-161850823C92}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PuppyBreeding.Models", "PuppyBreeding.Models\PuppyBreeding.Models.csproj", "{DDF5965B-7FDA-4B93-A468-8EDF9BA4733E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PuppyBreeding.Contracts", "PuppyBreeding.Contracts\PuppyBreeding.Contracts.csproj", "{95AB39C4-76E5-4C25-AA19-FD7F2EF43DB3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PuppyBreeding.Services", "PuppyBreeding.Services\PuppyBreeding.Services.csproj", "{16FD8CB4-80DC-4494-B509-2F6F170BEFB3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +23,22 @@ Global
 		{12D4618D-A308-4799-879A-415ABC7F143D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{12D4618D-A308-4799-879A-415ABC7F143D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{12D4618D-A308-4799-879A-415ABC7F143D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B4F56AC-55EC-468A-AAAB-161850823C92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B4F56AC-55EC-468A-AAAB-161850823C92}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B4F56AC-55EC-468A-AAAB-161850823C92}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B4F56AC-55EC-468A-AAAB-161850823C92}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DDF5965B-7FDA-4B93-A468-8EDF9BA4733E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDF5965B-7FDA-4B93-A468-8EDF9BA4733E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DDF5965B-7FDA-4B93-A468-8EDF9BA4733E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DDF5965B-7FDA-4B93-A468-8EDF9BA4733E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95AB39C4-76E5-4C25-AA19-FD7F2EF43DB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95AB39C4-76E5-4C25-AA19-FD7F2EF43DB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95AB39C4-76E5-4C25-AA19-FD7F2EF43DB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95AB39C4-76E5-4C25-AA19-FD7F2EF43DB3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16FD8CB4-80DC-4494-B509-2F6F170BEFB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16FD8CB4-80DC-4494-B509-2F6F170BEFB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16FD8CB4-80DC-4494-B509-2F6F170BEFB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16FD8CB4-80DC-4494-B509-2F6F170BEFB3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
