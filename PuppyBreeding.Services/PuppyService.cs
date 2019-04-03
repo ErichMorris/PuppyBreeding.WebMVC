@@ -56,5 +56,25 @@ namespace PuppyBreeding.Services
                 return query.ToArray();
             }
         }
+        public PuppyDetail GetPuppyById(int puppyId)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Puppies
+                        .Single(e => e.PuppyId == puppyId);
+                return
+                    new PuppyDetail
+                    {
+                        PuppyId = entity.PuppyId,
+                        PuppyName = entity.PuppyName,
+                        Weight = entity.Weight,
+                        Age = entity.Age,
+                        Gender = entity.Gender,
+                        Price = entity.Price
+                    };
+            }
+        }
     }
 }

@@ -41,6 +41,13 @@ namespace PuppyBreeding.WebMVC.Controllers
             ModelState.AddModelError("", "Puppy could not be added.");
             return View(model);
         }
+        public ActionResult Details(int id)
+        {
+            var svc = CreatePuppyService();
+            var model = svc.GetPuppiesById(id);
+
+            return View(model);
+        }
 
 
         private PuppyService CreatePuppyService()

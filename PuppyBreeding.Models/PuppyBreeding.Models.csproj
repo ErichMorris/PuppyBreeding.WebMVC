@@ -56,6 +56,7 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PuppyCreate.cs" />
+    <Compile Include="PuppyDetail.cs" />
     <Compile Include="PuppyListItem.cs" />
   </ItemGroup>
   <ItemGroup>
