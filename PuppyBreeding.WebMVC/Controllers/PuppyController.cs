@@ -44,7 +44,7 @@ namespace PuppyBreeding.WebMVC.Controllers
         public ActionResult Details(int id)
         {
             var svc = CreatePuppyService();
-            var model = svc.GetPuppiesById(id);
+            var model = svc.GetPuppyById(id);
 
             return View(model);
         }
