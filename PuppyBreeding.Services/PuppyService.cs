@@ -11,7 +11,7 @@ namespace PuppyBreeding.Services
     public class PuppyService
     {
         private readonly Guid _userId;
-        public PuppyService (Guid userId)
+        public PuppyService(Guid userId)
         {
             _userId = userId;
         }
@@ -24,7 +24,7 @@ namespace PuppyBreeding.Services
                     Weight = model.Weight,
                     Age = model.Age,
                     Gender = model.Gender,
-                    Price = model.Price 
+                    Price = model.Price
                 };
 
             using (var ctx = new ApplicationDbContext())
@@ -74,6 +74,23 @@ namespace PuppyBreeding.Services
                         Gender = entity.Gender,
                         Price = entity.Price
                     };
+            }
+        }
+        public bool UpdatePuppy(PuppyEdit model)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Puppies
+                        .Single(e => e.PuppyId == model.PuppyId);
+                entity.PuppyId = model.PuppyId;
+                entity.PuppyName = model.PuppyName;
+                entity.Weight = model.Weight;
+                entity.Age = model.Age;
+                entity.Gender = model.Gender;
+                entity.Price = model.Price;
+                return ctx.SaveChanges() == 1;
             }
         }
     }
