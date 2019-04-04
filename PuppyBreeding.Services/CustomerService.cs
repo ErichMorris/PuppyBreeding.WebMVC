@@ -97,5 +97,19 @@ namespace PuppyBreeding.Services
                 return ctx.SaveChanges() == 1;
             }
         }
+        public bool DeleteCustomer(int customerId)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Customers
+                        .Single(e => e.CustomerId == customerId);
+
+                ctx.Customers.Remove(entity);
+
+                return ctx.SaveChanges() == 1;
+            }
+        }
     }
 }
