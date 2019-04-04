@@ -244,6 +244,8 @@
     <Content Include="Views\Puppy\Index.cshtml" />
     <Content Include="Views\Puppy\Create.cshtml" />
     <Content Include="Views\Puppy\Details.cshtml" />
+    <Content Include="Views\Puppy\Edit.cshtml" />
+    <Content Include="Views\Puppy\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
