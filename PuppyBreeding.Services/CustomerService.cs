@@ -21,7 +21,6 @@ namespace PuppyBreeding.Services
             var entity =
                 new Customer()
                 {
-                    CustomerId = model.CustomerId,
                     CustomerName = model.CustomerName,
                     Email = model.Email,
                     Phone = model.Phone,
