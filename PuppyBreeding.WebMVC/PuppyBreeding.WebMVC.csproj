@@ -177,6 +177,7 @@
     <Compile Include="Controllers\CustomerController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\MotherController.cs" />
     <Compile Include="Controllers\PuppyController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -251,6 +252,11 @@
     <Content Include="Views\Customer\Create.cshtml" />
     <Content Include="Views\Customer\Details.cshtml" />
     <Content Include="Views\Customer\Delete.cshtml" />
+    <Content Include="Views\Mother\Index.cshtml" />
+    <Content Include="Views\Mother\Create.cshtml" />
+    <Content Include="Views\Mother\Details.cshtml" />
+    <Content Include="Views\Mother\Edit.cshtml" />
+    <Content Include="Views\Mother\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

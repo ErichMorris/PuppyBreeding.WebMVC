@@ -34,6 +34,7 @@ namespace PuppyBreeding.Data
 
         public DbSet<Puppy> Puppies { get; set; }
         public DbSet<Customer> Customers { get; set; }
+        public DbSet<Mother> Mothers { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

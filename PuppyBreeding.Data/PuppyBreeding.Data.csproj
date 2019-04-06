@@ -64,7 +64,12 @@
     <Compile Include="Migrations\201904051546152_customerTable.Designer.cs">
       <DependentUpon>201904051546152_customerTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201904062339567_motherTable.cs" />
+    <Compile Include="Migrations\201904062339567_motherTable.Designer.cs">
+      <DependentUpon>201904062339567_motherTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Mother.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Puppy.cs" />
   </ItemGroup>
@@ -78,6 +83,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201904051546152_customerTable.resx">
       <DependentUpon>201904051546152_customerTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904062339567_motherTable.resx">
+      <DependentUpon>201904062339567_motherTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
