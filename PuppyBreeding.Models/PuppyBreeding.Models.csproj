@@ -59,6 +59,8 @@
     <Compile Include="CustomerEdit.cs" />
     <Compile Include="CustomerListItem.cs" />
     <Compile Include="FatherCreate.cs" />
+    <Compile Include="FatherDetail.cs" />
+    <Compile Include="FatherEdit.cs" />
     <Compile Include="FatherListItem.cs" />
     <Compile Include="MotherCreate.cs" />
     <Compile Include="MotherDetail.cs" />
