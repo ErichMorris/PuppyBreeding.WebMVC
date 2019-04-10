@@ -8,6 +8,41 @@ namespace PuppyBreeding.Data.Migrations
         public override void Up()
         {
             CreateTable(
+                "dbo.Customer",
+                c => new
+                    {
+                        CustomerId = c.Int(nullable: false, identity: true),
+                        CustomerName = c.String(nullable: false),
+                        Email = c.String(nullable: false),
+                        Phone = c.String(nullable: false),
+                        CustomerApproved = c.Boolean(nullable: false),
+                        DepositPaid = c.Boolean(nullable: false),
+                    })
+                .PrimaryKey(t => t.CustomerId);
+            
+            CreateTable(
+                "dbo.Father",
+                c => new
+                    {
+                        FatherId = c.Int(nullable: false, identity: true),
+                        FatherName = c.String(nullable: false),
+                        FatherWeight = c.Double(nullable: false),
+                        FatherAge = c.Int(nullable: false),
+                    })
+                .PrimaryKey(t => t.FatherId);
+            
+            CreateTable(
+                "dbo.Mother",
+                c => new
+                    {
+                        MotherId = c.Int(nullable: false, identity: true),
+                        MotherName = c.String(nullable: false),
+                        MotherWeight = c.Double(nullable: false),
+                        MotherAge = c.Int(nullable: false),
+                    })
+                .PrimaryKey(t => t.MotherId);
+            
+            CreateTable(
                 "dbo.Puppy",
                 c => new
                     {
@@ -17,8 +52,16 @@ namespace PuppyBreeding.Data.Migrations
                         Age = c.Int(nullable: false),
                         Gender = c.String(nullable: false),
                         Price = c.Double(nullable: false),
+                        FatherId = c.Int(nullable: false),
+                        MotherId = c.Int(nullable: false),
+                        FatherName = c.String(nullable: false),
+                        MotherName = c.String(nullable: false),
                     })
-                .PrimaryKey(t => t.PuppyId);
+                .PrimaryKey(t => t.PuppyId)
+                .ForeignKey("dbo.Father", t => t.FatherId, cascadeDelete: true)
+                .ForeignKey("dbo.Mother", t => t.MotherId, cascadeDelete: true)
+                .Index(t => t.FatherId)
+                .Index(t => t.MotherId);
             
             CreateTable(
                 "dbo.IdentityRole",
@@ -98,16 +141,23 @@ namespace PuppyBreeding.Data.Migrations
             DropForeignKey("dbo.IdentityUserLogin", "ApplicationUser_Id", "dbo.ApplicationUser");
             DropForeignKey("dbo.IdentityUserClaim", "ApplicationUser_Id", "dbo.ApplicationUser");
             DropForeignKey("dbo.IdentityUserRole", "IdentityRole_Id", "dbo.IdentityRole");
+            DropForeignKey("dbo.Puppy", "MotherId", "dbo.Mother");
+            DropForeignKey("dbo.Puppy", "FatherId", "dbo.Father");
             DropIndex("dbo.IdentityUserLogin", new[] { "ApplicationUser_Id" });
             DropIndex("dbo.IdentityUserClaim", new[] { "ApplicationUser_Id" });
             DropIndex("dbo.IdentityUserRole", new[] { "ApplicationUser_Id" });
             DropIndex("dbo.IdentityUserRole", new[] { "IdentityRole_Id" });
+            DropIndex("dbo.Puppy", new[] { "MotherId" });
+            DropIndex("dbo.Puppy", new[] { "FatherId" });
             DropTable("dbo.IdentityUserLogin");
             DropTable("dbo.IdentityUserClaim");
             DropTable("dbo.ApplicationUser");
             DropTable("dbo.IdentityUserRole");
             DropTable("dbo.IdentityRole");
             DropTable("dbo.Puppy");
+            DropTable("dbo.Mother");
+            DropTable("dbo.Father");
+            DropTable("dbo.Customer");
         }
     }
 }

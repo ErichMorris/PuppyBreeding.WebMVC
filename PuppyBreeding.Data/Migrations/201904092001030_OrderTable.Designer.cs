@@ -7,13 +7,13 @@ namespace PuppyBreeding.Data.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.0-30225")]
-    public sealed partial class InitialCreate : IMigrationMetadata
+    public sealed partial class OrderTable : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(InitialCreate));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(OrderTable));
         
         string IMigrationMetadata.Id
         {
-            get { return "201904031810286_InitialCreate"; }
+            get { return "201904092001030_OrderTable"; }
         }
         
         string IMigrationMetadata.Source

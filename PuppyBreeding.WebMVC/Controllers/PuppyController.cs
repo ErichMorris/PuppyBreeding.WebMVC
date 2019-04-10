@@ -23,6 +23,13 @@ namespace PuppyBreeding.WebMVC.Controllers
         // GET
         public ActionResult Create()
         {
+            var userId = Guid.Parse(User.Identity.GetUserId());
+            var fatherService = new FatherService(userId);
+            var fatherList = fatherService.GetFathers();
+            ViewBag.FatherId = new SelectList(fatherList, "FatherId", "FatherName");
+            var motherService = new MotherService(userId);
+            var motherList = motherService.GetMothers();
+            ViewBag.MotherId = new SelectList(motherList, "MotherId", "MotherName");
             return View();
         }
         [HttpPost]
@@ -58,6 +65,10 @@ namespace PuppyBreeding.WebMVC.Controllers
                 {
                     PuppyId = detail.PuppyId,
                     PuppyName = detail.PuppyName,
+                    MotherId = detail.MotherId,
+                    MotherName = detail.MotherName,
+                    FatherId = detail.FatherId,
+                    FatherName = detail.FatherName,
                     Weight = detail.Weight,
                     Age = detail.Age,
                     Gender = detail.Gender,
@@ -113,6 +124,19 @@ namespace PuppyBreeding.WebMVC.Controllers
         {
             var userId = Guid.Parse(User.Identity.GetUserId());
             var service = new PuppyService(userId);
+            return service;
+        }
+
+        private FatherService CreateFatherService()
+        {
+            var userId = Guid.Parse(User.Identity.GetUserId());
+            var service = new FatherService(userId);
+            return service;
+        }
+        private MotherService CreateMotherService()
+        {
+            var userId = Guid.Parse(User.Identity.GetUserId());
+            var service = new MotherService(userId);
             return service;
         }
     }

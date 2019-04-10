@@ -179,6 +179,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MotherController.cs" />
+    <Compile Include="Controllers\OrderController.cs" />
     <Compile Include="Controllers\PuppyController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -245,7 +246,6 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Puppy\Index.cshtml" />
-    <Content Include="Views\Puppy\Create.cshtml" />
     <Content Include="Views\Puppy\Details.cshtml" />
     <Content Include="Views\Puppy\Edit.cshtml" />
     <Content Include="Views\Puppy\Delete.cshtml" />
@@ -263,6 +263,12 @@
     <Content Include="Views\Father\Details.cshtml" />
     <Content Include="Views\Father\Edit.cshtml" />
     <Content Include="Views\Father\Delete.cshtml" />
+    <Content Include="Views\Puppy\Create.cshtml" />
+    <Content Include="Views\Order\Index.cshtml" />
+    <Content Include="Views\Order\Create.cshtml" />
+    <Content Include="Views\Order\Details.cshtml" />
+    <Content Include="Views\Order\Edit.cshtml" />
+    <Content Include="Views\Order\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

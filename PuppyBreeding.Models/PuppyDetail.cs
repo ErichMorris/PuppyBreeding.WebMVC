@@ -9,6 +9,10 @@ namespace PuppyBreeding.Models
     public class PuppyDetail
     {
         public int PuppyId { get; set; }
+        public int MotherId { get; set; }
+        public int FatherId { get; set; }
+        public string MotherName { get; set; }
+        public string FatherName { get; set; }
         public string PuppyName { get; set; }
         public double Weight { get; set; }
         public int Age { get; set; }

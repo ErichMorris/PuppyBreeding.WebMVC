@@ -23,6 +23,8 @@ namespace PuppyBreeding.Services
                     PuppyName = model.PuppyName,
                     Weight = model.Weight,
                     Age = model.Age,
+                    MotherId = model.MotherId,
+                    FatherId = model.FatherId,
                     Gender = model.Gender,
                     Price = model.Price
                 };
@@ -40,12 +42,17 @@ namespace PuppyBreeding.Services
                 var query =
                     ctx
                         .Puppies
+
                         .Select(
                             e =>
                                 new PuppyListItem
                                 {
                                     PuppyId = e.PuppyId,
+                                    MotherId = e.MotherId,
+                                    FatherId = e.FatherId,
                                     PuppyName = e.PuppyName,
+                                    MotherName = e.Mother.MotherName,
+                                    FatherName = e.Father.FatherName,
                                     Weight = e.Weight,
                                     Age = e.Age,
                                     Gender = e.Gender,
@@ -68,6 +75,8 @@ namespace PuppyBreeding.Services
                     new PuppyDetail
                     {
                         PuppyId = entity.PuppyId,
+                        FatherId = entity.FatherId,
+                        MotherId = entity.MotherId,
                         PuppyName = entity.PuppyName,
                         Weight = entity.Weight,
                         Age = entity.Age,
@@ -85,6 +94,8 @@ namespace PuppyBreeding.Services
                         .Puppies
                         .Single(e => e.PuppyId == model.PuppyId);
                 entity.PuppyId = model.PuppyId;
+                entity.FatherId = model.FatherId;
+                entity.MotherId = model.MotherId;
                 entity.PuppyName = model.PuppyName;
                 entity.Weight = model.Weight;
                 entity.Age = model.Age;

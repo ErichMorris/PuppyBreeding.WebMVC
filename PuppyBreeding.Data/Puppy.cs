@@ -26,5 +26,15 @@ namespace PuppyBreeding.Data
 
         [Required]
         public double Price { get; set; }
+
+        //Table References
+        [Required]
+        public int FatherId { get; set; }
+
+        [Required]
+        public int MotherId { get; set; }
+
+        public virtual Mother Mother { get; set; }
+        public virtual Father Father { get; set; }
     }
 }

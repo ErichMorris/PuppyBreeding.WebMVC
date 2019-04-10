@@ -57,6 +57,7 @@
     <Compile Include="CustomerService.cs" />
     <Compile Include="FatherService.cs" />
     <Compile Include="MotherService.cs" />
+    <Compile Include="OrderService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PuppyService.cs" />
   </ItemGroup>
