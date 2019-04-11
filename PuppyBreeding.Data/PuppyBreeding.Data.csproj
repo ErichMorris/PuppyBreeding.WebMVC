@@ -69,6 +69,10 @@
     <Compile Include="Migrations\201904092001030_OrderTable.Designer.cs">
       <DependentUpon>201904092001030_OrderTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201904111909324_CrudUpdate.cs" />
+    <Compile Include="Migrations\201904111909324_CrudUpdate.Designer.cs">
+      <DependentUpon>201904111909324_CrudUpdate.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Mother.cs" />
     <Compile Include="Order.cs" />
@@ -88,6 +92,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201904092001030_OrderTable.resx">
       <DependentUpon>201904092001030_OrderTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904111909324_CrudUpdate.resx">
+      <DependentUpon>201904111909324_CrudUpdate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
