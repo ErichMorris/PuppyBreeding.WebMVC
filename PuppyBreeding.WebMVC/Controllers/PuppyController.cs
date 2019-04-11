@@ -20,6 +20,7 @@ namespace PuppyBreeding.WebMVC.Controllers
             var model = service.GetPuppies();
             return View(model);
         }
+
         // GET
         public ActionResult Create()
         {
@@ -52,7 +53,6 @@ namespace PuppyBreeding.WebMVC.Controllers
         {
             var svc = CreatePuppyService();
             var model = svc.GetPuppyById(id);
-
             return View(model);
         }
 

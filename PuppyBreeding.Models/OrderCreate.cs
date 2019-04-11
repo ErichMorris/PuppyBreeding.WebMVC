@@ -11,6 +11,8 @@ namespace PuppyBreeding.Models
         public int PuppyId { get; set; }
         public int CustomerId { get; set; }
         public double Price { get; set; }
+        public string PuppyName { get; set; }
+        public string CustomerName { get; set; }
         public bool CustomerApproved { get; set; }
         public bool DepositPaid { get; set; }
         public bool PriceInFullPaid { get; set; }

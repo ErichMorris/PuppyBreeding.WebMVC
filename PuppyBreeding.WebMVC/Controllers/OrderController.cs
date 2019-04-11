@@ -66,6 +66,8 @@ namespace PuppyBreeding.WebMVC.Controllers
                     OrderId = detail.OrderId,
                     PuppyId = detail.PuppyId,
                     CustomerId = detail.CustomerId,
+                    PuppyName = detail.PuppyName,
+                    CustomerName = detail.CustomerName,
                     Price = detail.Price,
                     CustomerApproved = detail.CustomerApproved,
                     DepositPaid = detail.DepositPaid,

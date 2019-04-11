@@ -46,6 +46,8 @@ namespace PuppyBreeding.Services
                                     OrderId = e.OrderId,
                                     PuppyId = e.PuppyId,
                                     CustomerId = e.CustomerId,
+                                    PuppyName = e.Puppy.PuppyName,
+                                    CustomerName = e. Customer.CustomerName,
                                     Price = e.Puppy.Price,
                                     CustomerApproved = e.Customer.CustomerApproved,
                                     DepositPaid = e.Customer.DepositPaid,
@@ -70,7 +72,13 @@ namespace PuppyBreeding.Services
                         OrderId = entity.OrderId,
                         PuppyId = entity.PuppyId,
                         CustomerId = entity.CustomerId,
+                        CustomerName = entity.Customer.CustomerName,
+                        CustomerApproved = entity.Customer.CustomerApproved,
+                        DepositPaid = entity.Customer.DepositPaid,
+                        PuppyName = entity.Puppy.PuppyName,
+                        Price = entity.Puppy.Price,
                         PriceInFullPaid = entity.PriceInFullPaid
+                        
                     };
             }
         }

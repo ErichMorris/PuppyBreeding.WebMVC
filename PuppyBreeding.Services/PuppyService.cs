@@ -78,6 +78,8 @@ namespace PuppyBreeding.Services
                         FatherId = entity.FatherId,
                         MotherId = entity.MotherId,
                         PuppyName = entity.PuppyName,
+                        MotherName = entity.Mother.MotherName,
+                        FatherName = entity.Father.FatherName,
                         Weight = entity.Weight,
                         Age = entity.Age,
                         Gender = entity.Gender,

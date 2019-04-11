@@ -10,7 +10,9 @@ namespace PuppyBreeding.Models
     {
         public int OrderId { get; set; }
         public int PuppyId { get; set; }
+        public string PuppyName { get; set; }
         public int CustomerId { get; set; }
+        public string CustomerName { get; set; }
         public double Price { get; set; }
         public bool CustomerApproved { get; set; }
         public bool DepositPaid { get; set; }
