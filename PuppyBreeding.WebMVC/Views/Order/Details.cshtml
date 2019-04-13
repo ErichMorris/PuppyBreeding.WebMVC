@@ -3,72 +3,73 @@
 @{
     ViewBag.Title = "Details";
 }
+<div class="dataContainer">
+    <h2>Details</h2>
 
-<h2>Details</h2>
+    <div>
+        <h4>OrderDetail</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.OrderId)
+            </dt>
 
-<div>
-    <h4>OrderDetail</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.OrderId)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.OrderId)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.OrderId)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.PuppyName)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.PuppyName)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.PuppyName)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.PuppyName)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.CustomerName)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.CustomerName)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.CustomerName)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.CustomerName)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Price)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Price)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Price)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Price)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.CustomerApproved)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.CustomerApproved)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.CustomerApproved)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.CustomerApproved)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.DepositPaid)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.DepositPaid)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.DepositPaid)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.DepositPaid)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.PriceInFullPaid)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.PriceInFullPaid)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.PriceInFullPaid)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.PriceInFullPaid)
-        </dd>
-
-    </dl>
-</div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.OrderId }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.OrderId }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+    </div>

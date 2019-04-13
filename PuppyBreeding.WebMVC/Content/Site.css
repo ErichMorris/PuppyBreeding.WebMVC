@@ -18,26 +18,26 @@
     width: 640px;
     height: 360px;
 }
-body, html {
-    height: 100%;
+
+.footerContainer {
+    color:azure;
 }
-
-.bg {
-    /* The image used */
+.dataContainer {
+    background-color:azure;
+}
+body {
     background-image: url("Assets/indexBackground.jpg");
-
-    /* Center and scale the image nicely */
     background-position: center;
     background-repeat: repeat;
     background-size: cover;
-}
-body {
     padding-top: 50px;
     padding-bottom: 20px;
     height: 100%;
-    color: azure;
+    background-color: cornflowerblue;
 }
-
+.navbar-toggle {
+    background-color:cadetblue;
+}
 /* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;

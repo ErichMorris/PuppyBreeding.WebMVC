@@ -3,48 +3,49 @@
 @{
     ViewBag.Title = "Details";
 }
+<div class="dataContainer">
+    <h2>Details</h2>
 
-<h2>Details</h2>
+    <div>
+        <h4>MotherDetail</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.MotherId)
+            </dt>
 
-<div>
-    <h4>MotherDetail</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.MotherId)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.MotherId)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.MotherId)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.MotherName)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.MotherName)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.MotherName)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.MotherName)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.MotherWeight)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.MotherWeight)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.MotherWeight)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.MotherWeight)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.MotherAge)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.MotherAge)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.MotherAge)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.MotherAge)
-        </dd>
-
-    </dl>
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.MotherId }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.MotherId }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
