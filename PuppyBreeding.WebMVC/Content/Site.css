@@ -1,16 +1,41 @@
 ﻿.navbar {
-    background-color: darkolivegreen;
+    background-color: azure;
 }
+
 .navbar-inverse .navbar-brand {
     color: black;
+}
+.navbar-inverse .navbar-brand:hover {
+    color: blue;
 }
 .navbar-inverse .navbar-nav > li > a {
     color: black;
 }
+.navbar-inverse .navbar-nav > li > a:hover {
+    color: blue;
+}
+.myCarousel {
+    width: 640px;
+    height: 360px;
+}
+body, html {
+    height: 100%;
+}
+
+.bg {
+    /* The image used */
+    background-image: url("Assets/indexBackground.jpg");
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: repeat;
+    background-size: cover;
+}
 body {
     padding-top: 50px;
     padding-bottom: 20px;
-    background-color: burlywood;
+    height: 100%;
+    color: azure;
 }
 
 /* Set padding to keep content from hitting the edges */
