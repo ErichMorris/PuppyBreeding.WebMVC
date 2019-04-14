@@ -1,27 +1,49 @@
-﻿.navbar {
+﻿.jumbotron {
+    text-align: center;
     background-color: azure;
+    margin-top: 25px;
+    font-family: 'Great Vibes', cursive;
+    border: groove 10px;
+    border-color: cadetblue;
+}
+.thumbnail > img {
+    border-radius: 20px;
+}
+.navbar {
+    background-color: azure;
+    border-bottom: groove 5px;
+    border-top: groove 5px;
+    border-color: cadetblue;
 }
 
 .navbar-inverse .navbar-brand {
     color: black;
+    font-family: 'Courgette', cursive;
 }
 .navbar-inverse .navbar-brand:hover {
     color: blue;
 }
 .navbar-inverse .navbar-nav > li > a {
     color: black;
+    font-family: 'Courgette', cursive;
 }
 .navbar-inverse .navbar-nav > li > a:hover {
     color: blue;
 }
-.myCarousel {
-    width: 640px;
-    height: 360px;
+.carousel-inner {
+    height: 450px;
+    width: 100%;
+    background-color: black;
+    border-radius: 25px;
 }
-
-.footerContainer {
-    color:azure;
-}
+    .carousel-inner > .item > img {
+        height: 450px;
+        width: 50%;
+        margin: 0 auto;
+    }
+    .footerContainer {
+        color: black;
+    }
 .dataContainer {
     background-color:azure;
 }
