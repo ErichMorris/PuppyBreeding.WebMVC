@@ -1,4 +1,12 @@
-﻿
+﻿.dogDescription {
+    font-family: 'Courgette', cursive;
+    font-size: 25px;
+    text-decoration: solid;
+    background-color: azure;
+    border: groove 10px;
+    border-color: cadetblue;
+    padding: 10px;
+}
 .viewTitleContainer {
     display: flex;
     justify-content: center;
@@ -8,6 +16,8 @@
     background-color: azure;
     margin-top: 35px;
     font-family: 'Great Vibes', cursive;
+
+    font-weight: bold;
     border: groove 10px;
     border-color: cadetblue;
 }
@@ -25,6 +35,8 @@
 .puppyTitle {
     text-align: center;
     font-family: 'Great Vibes', cursive;
+    font-weight: bold;
+    font-size: 38px;
 }
 .thumbnail > img {
    border-radius: 20px;
