@@ -12,7 +12,7 @@ namespace PuppyBreeding.Models
         public int PuppyId { get; set; }
         public int MotherId { get; set; }
         public int FatherId { get; set; }
-        [Display(Name = "Puppie's Name")]
+        [Display(Name = "Puppy's Name")]
         public string PuppyName { get; set; }
         [Display(Name = "Mother's Name")]
         public string MotherName { get; set; }

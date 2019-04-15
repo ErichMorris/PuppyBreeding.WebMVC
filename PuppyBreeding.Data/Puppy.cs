@@ -12,7 +12,7 @@ namespace PuppyBreeding.Data
     {
         [Key]
         public int PuppyId { get; set; }
-        [Display(Name = "Name")]
+
         [Required]
         public string PuppyName { get; set; }
 

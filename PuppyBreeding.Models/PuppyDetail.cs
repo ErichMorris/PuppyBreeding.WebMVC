@@ -16,7 +16,7 @@ namespace PuppyBreeding.Models
         public string MotherName { get; set; }
         [Display(Name = "Father's Name")]
         public string FatherName { get; set; }
-        [Display(Name = "Puppie's Name")]
+        [Display(Name = "Puppy's Name")]
         public string PuppyName { get; set; }
         [Display(Name = "Weight (in pounds)")]
         public double Weight { get; set; }
