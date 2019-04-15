@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
@@ -11,7 +12,7 @@ namespace PuppyBreeding.Data
     {
         [Key]
         public int PuppyId { get; set; }
-
+        [Display(Name = "Name")]
         [Required]
         public string PuppyName { get; set; }
 
