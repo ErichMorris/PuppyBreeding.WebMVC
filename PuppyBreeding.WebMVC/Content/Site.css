@@ -1,13 +1,33 @@
-﻿.jumbotron {
+﻿
+.viewTitleContainer {
+    display: flex;
+    justify-content: center;
+}
+.jumbotron {
     text-align: center;
     background-color: azure;
-    margin-top: 25px;
+    margin-top: 35px;
     font-family: 'Great Vibes', cursive;
     border: groove 10px;
     border-color: cadetblue;
 }
+.puppyTitleRow {
+    display: flex;
+    justify-content: center;
+    padding-top: 25px;
+    padding-bottom: 15px;
+}
+.puppyTitleContainer {
+    background-color: azure;
+    border: groove 10px;
+    border-color: cadetblue;
+}
+.puppyTitle {
+    text-align: center;
+    font-family: 'Great Vibes', cursive;
+}
 .thumbnail > img {
-    border-radius: 20px;
+   border-radius: 20px;
 }
 .navbar {
     background-color: azure;
@@ -46,6 +66,9 @@
     }
 .dataContainer {
     background-color:azure;
+    border: groove 10px;
+    border-color: cadetblue;
+    margin-top: 50px;
 }
 body {
     background-image: url("Assets/indexBackground.jpg");

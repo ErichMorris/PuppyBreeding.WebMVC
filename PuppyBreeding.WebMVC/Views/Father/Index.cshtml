@@ -5,61 +5,62 @@
 }
 
 <div class="dataContainer">
-<h2>Index</h2>
-
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-
-@if (TempData.ContainsKey("SaveResult"))
-{
-    <div class="alert alert-success fade in" role="alert">
-        @ViewBag.SaveResult
-        <button type="button" class="close" data-dismiss="alert">
-            <span>&times;</span>
-        </button>
-        @TempData["SaveResult"]
+    <div class="viewTitleContainer">
+        <h2>Fathers</h2>
     </div>
-}
-    <table class="table">
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.FatherId)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.FatherName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.FatherWeight)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.FatherAge)
-            </th>
-            <th></th>
-        </tr>
+        <p>
+            @Html.ActionLink("Create New", "Create")
+        </p>
 
-        @foreach (var item in Model)
+        @if (TempData.ContainsKey("SaveResult"))
         {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.FatherId)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.FatherName)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.FatherWeight)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.FatherAge)
-                </td>
-                <td>
-                    @Html.ActionLink("Edit", "Edit", new { id = item.FatherId }) |
-                    @Html.ActionLink("Details", "Details", new { id = item.FatherId }) |
-                    @Html.ActionLink("Delete", "Delete", new { id = item.FatherId })
-                </td>
-            </tr>
+            <div class="alert alert-success fade in" role="alert">
+                @ViewBag.SaveResult
+                <button type="button" class="close" data-dismiss="alert">
+                    <span>&times;</span>
+                </button>
+                @TempData["SaveResult"]
+            </div>
         }
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.FatherId)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.FatherName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.FatherWeight)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.FatherAge)
+                </th>
+                <th></th>
+            </tr>
 
-    </table>
-</div>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.FatherId)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.FatherName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.FatherWeight)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.FatherAge)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { id = item.FatherId }) |
+                        @Html.ActionLink("Details", "Details", new { id = item.FatherId }) |
+                        @Html.ActionLink("Delete", "Delete", new { id = item.FatherId })
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </div>

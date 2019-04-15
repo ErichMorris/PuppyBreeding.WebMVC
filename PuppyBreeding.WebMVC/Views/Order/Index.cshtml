@@ -5,77 +5,78 @@
 }
 
 <div class="dataContainer">
-<h2>Index</h2>
-
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-@if (TempData.ContainsKey("SaveResult"))
-{
-    <div class="alert alert-success fade in" role="alert">
-        <button type="button" class="close" data-dismiss="alert">
-            <span>&times;</span>
-        </button>
-        @TempData["SaveResult"]
+    <div class="viewTitleContainer">
+        <h2>Orders</h2>
     </div>
-}
-    <table class="table">
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.OrderId)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.PuppyName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.CustomerName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Price)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.CustomerApproved)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DepositPaid)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.PriceInFullPaid)
-            </th>
-            <th></th>
-        </tr>
-
-        @foreach (var item in Model)
+        <p>
+            @Html.ActionLink("Create New", "Create")
+        </p>
+        @if (TempData.ContainsKey("SaveResult"))
         {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.OrderId)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.PuppyName)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.CustomerName)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Price)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.CustomerApproved)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.DepositPaid)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.PriceInFullPaid)
-                </td>
-                <td>
-                    @Html.ActionLink("Edit", "Edit", new { id = item.OrderId }) |
-                    @Html.ActionLink("Details", "Details", new { id = item.OrderId }) |
-                    @Html.ActionLink("Delete", "Delete", new { id = item.OrderId })
-                </td>
-            </tr>
+            <div class="alert alert-success fade in" role="alert">
+                <button type="button" class="close" data-dismiss="alert">
+                    <span>&times;</span>
+                </button>
+                @TempData["SaveResult"]
+            </div>
         }
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.OrderId)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PuppyName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CustomerName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Price)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CustomerApproved)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DepositPaid)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PriceInFullPaid)
+                </th>
+                <th></th>
+            </tr>
 
-    </table>
-</div>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.OrderId)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PuppyName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CustomerName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Price)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CustomerApproved)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DepositPaid)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PriceInFullPaid)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { id = item.OrderId }) |
+                        @Html.ActionLink("Details", "Details", new { id = item.OrderId }) |
+                        @Html.ActionLink("Delete", "Delete", new { id = item.OrderId })
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </div>
