@@ -22,30 +22,30 @@
             <div class="navbar-collapse collapse">
 
                 <ul class="nav navbar-nav">
-                    
+
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
 
-                        @if (User.Identity.IsAuthenticated)
-                        {
-                            <li>@Html.ActionLink("Puppies", "Index", "Puppy")</li>
-                        }
-                        @if (User.Identity.IsAuthenticated)
-                        {
-                            <li>@Html.ActionLink("Customers", "Index", "Customer")</li>
-                        }
-                        @if (User.Identity.IsAuthenticated)
-                        {
-                            <li>@Html.ActionLink("Mothers", "Index", "Mother")</li>
-                        }
-                        @if (User.Identity.IsAuthenticated)
-                        {
-                            <li>@Html.ActionLink("Fathers", "Index", "Father")</li>
-                        }
-                        @if (User.Identity.IsAuthenticated)
-                        {
-                            <li>@Html.ActionLink("Orders", "Index", "Order")</li>
-                        }
-                    </ul>
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <li>@Html.ActionLink("Puppies", "Index", "Puppy")</li>
+                    }
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <li>@Html.ActionLink("Customers", "Index", "Customer")</li>
+                    }
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <li>@Html.ActionLink("Mothers", "Index", "Mother")</li>
+                    }
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <li>@Html.ActionLink("Fathers", "Index", "Father")</li>
+                    }
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <li>@Html.ActionLink("Orders", "Index", "Order")</li>
+                    }
+                </ul>
                 
                 @Html.Partial("_LoginPartial")
             </div>
