@@ -9,7 +9,9 @@ namespace PuppyBreeding.Models
 {
     public class OrderCreate
     {
+        [Display(Name = "Puppy's Name")]
         public int PuppyId { get; set; }
+        [Display(Name = "Customer's Name")]
         public int CustomerId { get; set; }
         [Display(Name = "Price (USD)")]
         public double Price { get; set; }

@@ -11,6 +11,10 @@
     display: flex;
     justify-content: center;
 }
+.buttonContainer {
+    display: flex;
+    justify-content: center;
+}
 .jumbotron {
     text-align: center;
     background-color: azure;

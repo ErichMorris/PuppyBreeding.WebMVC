@@ -9,9 +9,7 @@
         <h2>Customers</h2>
     </div>
 
-    <p>
-        @Html.ActionLink("Create New", "Create")
-    </p>
+
     <table class="table">
         <tr>
             <th>
@@ -65,4 +63,9 @@
         }
 
     </table>
+    <div class="buttonContainer">
+        <p>
+            @Html.ActionLink("Create New", "Create", null, new { @class = "btn btn-primary btn-large" })
+        </p>
     </div>
+</div>

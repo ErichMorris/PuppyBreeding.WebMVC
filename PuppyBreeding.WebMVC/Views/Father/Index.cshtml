@@ -8,59 +8,62 @@
     <div class="viewTitleContainer">
         <h2>Fathers</h2>
     </div>
-        <p>
-            @Html.ActionLink("Create New", "Create")
-        </p>
 
-        @if (TempData.ContainsKey("SaveResult"))
+
+    @if (TempData.ContainsKey("SaveResult"))
+    {
+        <div class="alert alert-success fade in" role="alert">
+            @ViewBag.SaveResult
+            <button type="button" class="close" data-dismiss="alert">
+                <span>&times;</span>
+            </button>
+            @TempData["SaveResult"]
+        </div>
+    }
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.FatherId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FatherName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FatherWeight)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FatherAge)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
         {
-            <div class="alert alert-success fade in" role="alert">
-                @ViewBag.SaveResult
-                <button type="button" class="close" data-dismiss="alert">
-                    <span>&times;</span>
-                </button>
-                @TempData["SaveResult"]
-            </div>
-        }
-        <table class="table">
             <tr>
-                <th>
-                    @Html.DisplayNameFor(model => model.FatherId)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.FatherName)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.FatherWeight)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.FatherAge)
-                </th>
-                <th></th>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FatherId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FatherName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FatherWeight)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FatherAge)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.FatherId }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.FatherId }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.FatherId })
+                </td>
             </tr>
+        }
 
-            @foreach (var item in Model)
-            {
-                <tr>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.FatherId)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.FatherName)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.FatherWeight)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.FatherAge)
-                    </td>
-                    <td>
-                        @Html.ActionLink("Edit", "Edit", new { id = item.FatherId }) |
-                        @Html.ActionLink("Details", "Details", new { id = item.FatherId }) |
-                        @Html.ActionLink("Delete", "Delete", new { id = item.FatherId })
-                    </td>
-                </tr>
-            }
-
-        </table>
+    </table>
+    <div class="buttonContainer">
+        <p>
+            @Html.ActionLink("Create New", "Create", null, new { @class = "btn btn-primary btn-large" })
+        </p>
     </div>
+</div>

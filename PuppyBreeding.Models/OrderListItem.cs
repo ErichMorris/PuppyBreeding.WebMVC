@@ -10,9 +10,11 @@ namespace PuppyBreeding.Models
     public class OrderListItem
     {
         public int OrderId { get; set; }
+        [Display(Name = "Puppy's Name")]
         public int PuppyId { get; set; }
         [Display(Name = "Puppy's Name")]
         public string PuppyName { get; set; }
+        [Display(Name = "Customer's Name")]
         public int CustomerId { get; set; }
         [Display(Name = "Customer's Name")]
         public string CustomerName { get; set; }
