@@ -1,17 +1,16 @@
 ﻿@{
     ViewBag.Title = "Contact";
 }
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
+<h1>Contact Us</h1>
+<div class="row">
 
-<address>
-    One Microsoft Way<br />
-    Redmond, WA 98052-6399<br />
-    <abbr title="Phone">P:</abbr>
-    425.555.0100
-</address>
-
-<address>
-    <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
-    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
-</address>
+<div class="col-sm-3 col-md-3 col-lg-3">
+    <div class="emailForm">
+<form method="POST" action="https://formspree.io/emorris1692@gmail.com">
+    <input type="email" name="email" placeholder="Your email">
+    <textarea name="message" placeholder="Message"></textarea>
+    <button type="submit">Send Test</button>
+</form>
+    </div>
+    </div>
+</div>

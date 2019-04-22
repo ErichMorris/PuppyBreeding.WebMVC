@@ -190,6 +190,22 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\Assets\01.jpg" />
+    <Content Include="Content\Assets\02.jpg" />
+    <Content Include="Content\Assets\03.jpg" />
+    <Content Include="Content\Assets\04.jpg" />
+    <Content Include="Content\Assets\Agnes.jpg" />
+    <Content Include="Content\Assets\Asher.JPG" />
+    <Content Include="Content\Assets\Blanch.jpg" />
+    <Content Include="Content\Assets\Edgar.jpg" />
+    <Content Include="Content\Assets\Ester.jpg" />
+    <Content Include="Content\Assets\Eugene.jpg" />
+    <Content Include="Content\Assets\Hazel.jpg" />
+    <Content Include="Content\Assets\Howard.jpg" />
+    <Content Include="Content\Assets\indexBackground.jpg" />
+    <Content Include="Content\Assets\Mabel.JPG" />
+    <Content Include="Content\Assets\Pearl.jpg" />
+    <Content Include="Content\Assets\Stanley.jpg" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -200,6 +216,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <None Include="Properties\PublishProfiles\PuppyBreeding - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -273,7 +290,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Content\Assets\" />
+    <Folder Include="Content\Assets\NewFolder1\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
